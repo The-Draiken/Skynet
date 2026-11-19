@@ -1,0 +1,33 @@
+// Skynet Enemy Downed System - Passives
+// Applied to eligible enemies when they enter the downed state.
+
+new entry "Skynet_DownedTechPassive"
+type "PassiveData"
+data "DisplayName" "hc9fb7c1age9a3ge468gbbbcg2dba91245b9a;2"
+data "Icon" "Status_Downed"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate"
+data "StatsFunctors" "ApplyStatus(SKYNET_PRONE_DOWNED,100,-1);"
+
+new entry "Skynet_DownedTurnTracker"
+type "PassiveData"
+data "DisplayName" "h063cb48fgf88cg666eg88aag10c0121d7cde;1"
+data "Description" "h5549bc40g5154g5eaegf7eegbca6af759562;1"
+data "Icon" "Status_Downed"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "StatsFunctors" "ApplyStatus(SELF,SKYNET_DOWNED5E_ACTIVE_TURN,1)"
+
+new entry "Skynet_DownedTurnTracker2"
+type "PassiveData"
+using "Skynet_DownedTurnTracker"
+data "StatsFunctorContext" "OnCast;OnAttack"
+data "StatsFunctors" "IF(HasUseCosts('ActionPoint')):ApplyStatus(SELF,SKYNET_D5E_USED_ACTION,100,1);IF(HasUseCosts('BonusActionPoint')):ApplyStatus(SELF,SKYNET_D5E_USED_BACTION,100,1);IF(HasUseCosts('ReactionActionPoint')):ApplyStatus(SELF,SKYNET_D5E_USED_REACTION,100,1);"
+
+// Inside Skynet: opt-out passive for proximity-based combat grouping
+new entry "SKYNET_CGBP_IGNORE"
+type "PassiveData"
+data "DisplayName" "h57008a4ab98a42fa9cf667dbcedb4e99d58b;1"
+data "Icon" "statIcons_UnderOperation"
+data "Properties" "IsHidden"
+data "Boosts" ""

@@ -1,0 +1,8 @@
+// Makes Combat Extender passives visible by removing IsHidden from CX_PASSIVE
+// Must load after CombatExtender's Boost.txt (alphabetical order: C < S, so this works)
+// Pattern matches UNSO - CX - Icon Activation's approach
+
+new entry "CX_PASSIVE"
+using "CX_PASSIVE"
+type "PassiveData"
+data "Properties" ""

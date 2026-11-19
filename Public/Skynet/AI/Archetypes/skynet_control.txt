@@ -1,0 +1,24 @@
+USING ranged
+
+// Skynet Control — prioritize debuffs, crowd control, disable enemies
+MULTIPLIER_CONTROL_ENEMY_POS                 3.0
+MULTIPLIER_CONTROL_NEUTRAL_POS               1.0
+MULTIPLIER_DOT_ENEMY_POS                     2.0
+MULTIPLIER_DOT_NEUTRAL_NEG                   0.5
+MULTIPLIER_INCAPACITATE                      3.0
+MULTIPLIER_BLIND                             3.0
+MULTIPLIER_KNOCKDOWN                         2.0
+MULTIPLIER_FEAR                              2.0
+MULTIPLIER_STATUS_REMOVE                     2.0
+MULTIPLIER_DAMAGE_ENEMY_POS                  0.8
+MULTIPLIER_KILL_ENEMY                        0.5
+MULTIPLIER_HEAL_ALLY_POS                     0.3
+MULTIPLIER_BOOST_SELF_POS                    0.3
+MULTIPLIER_FIRST_ACTION_BUFF                 0.2
+MULTIPLIER_ENDPOS_ENEMIES_NEARBY             0.5
+MULTIPLIER_TARGET_MY_ENEMY                   1.5
+MULTIPLIER_TARGET_PREFERRED                  10.0
+MODIFIER_HIT_CHANCE_STUPIDITY                0.0
+MODIFIER_CONCENTRATION_REMOVE_TARGET         1.0
+MULTIPLIER_SHOVE_ENEMY_POS                   0.0
+MULTIPLIER_ENDPOS_NOT_IN_DANGEROUS_SURFACE   0.5

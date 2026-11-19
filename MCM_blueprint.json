@@ -1,0 +1,35 @@
+{
+  "modTable": "Skynet",
+  "settings": [
+    {
+      "id": "EnableReactiveCounters",
+      "type": "checkbox",
+      "default": false,
+      "label": "Enable Reactive Counter Statuses",
+      "description": "When enabled, enemies may receive situational advantage/resistance counters when they detect repeated player tactics. Recommended off for immersion."
+    },
+    {
+      "id": "EnableDebugLogging",
+      "type": "checkbox",
+      "default": true,
+      "label": "Debug Logging",
+      "description": "Show detailed tactical analysis and spell choice decisions in the Script Extender console."
+    },
+    {
+      "id": "EnableEnemyDownedSystem",
+      "type": "checkbox",
+      "default": false,
+      "label": "Enable Enemy Downed System",
+      "description": "Humanoid and living enemies receive death saving throws at 0 HP instead of dying instantly. Downed enemies can be healed by allies with healing spells. Excludes undead, constructs, and other non-living creatures."
+    },
+    {
+      "id": "EnablePassiveCapping",
+      "type": "slider_int",
+      "default": 20,
+      "label": "Passive Cap (Performance)",
+      "description": "Max passives a creature can have before Skynet limits spell evaluation to reduce lag. Set to 0 to disable. Increase if you have fewer mods, decrease if you have heavy mod lists (Absolute Laboratory, Cahoot, Goon's Library).",
+      "min": 0,
+      "max": 100
+    }
+  ]
+}

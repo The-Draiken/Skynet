@@ -1,0 +1,5 @@
+{
+    "RequiredVersion": 12,
+    "ModTable": "Skynet_e883778e-f8ae-9d7c-aa01-e738c7fb1040",
+    "FeatureFlags": ["Lua"]
+}

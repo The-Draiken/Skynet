@@ -1,0 +1,30 @@
+// Skynet Spider Queen - Locate Eggs System
+// SKYNET_ prefixed to avoid conflicts.
+
+// ==================== LOCATE EGGS AURA ====================
+// Applied to Spider Queen at combat start. Detects egg clusters within 150m.
+new entry "SKYNET_SQ_LOCATE_AURA"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h000000000000000000000000000000000000;1"
+data "Description" "h000000000000000000000000000000000000;1"
+data "Icon" "Spell_Divination_DetectMagic"
+data "StackId" "SKYNET_SQ_LOCATE_AURA"
+data "StackType" "Overwrite"
+data "AuraRadius" "150"
+data "AuraStatuses" "ApplyStatus(SKYNET_SQ_LOCATE_DETECTED,100,0)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
+data "StatusGroups" "SG_None"
+
+// ==================== DETECTED EGG CLUSTER ====================
+// Applied to egg clusters within the locate aura range.
+new entry "SKYNET_SQ_LOCATE_DETECTED"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h000000000000000000000000000000000000;1"
+data "Description" "h000000000000000000000000000000000000;1"
+data "Icon" "Spell_Divination_DetectMagic"
+data "StackId" "SKYNET_SQ_LOCATE_DETECTED"
+data "StackType" "Overwrite"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
+data "StatusGroups" "SG_None"

@@ -1,0 +1,127 @@
+// ============================================================================
+// Skynet - CX High Level Spells (Levels 7-9)
+//
+// Adds CX_Spells_L7 / L8 / L9 / L8C as real, functional PassiveData entries -
+// Combat Extender itself only ships up through CX_Spells_L6/L6C. These four
+// are picked up automatically by Combat Extender's existing CheckPassive/
+// UnlockSpell logic once a character has the passive - no Combat Extender
+// file edits required, so this stays fully redistributable and doesn't
+// touch a mod Skynet doesn't own.
+//
+// Then assigns those four passives to the same 11 archetypes that
+// 'Ultimate NPC Stat Overhaul - CX' already raised to CX_Spells_L6 - each
+// entry below restates that mod's FULL existing Passives list and appends
+// the new tiers, rather than replacing it, since Larian's stat compiler
+// does not merge repeated "data \"Passives\"" fields across mods - the
+// last-loaded mod's line wins outright. For this to behave correctly,
+// Skynet must load AFTER Ultimate NPC Stat Overhaul - CX in the mod order.
+// ============================================================================
+
+// ---------------------------------------------------------------------------
+// Passive shells (Combat Extender's own Lua checks HasPassive(guid, name) by
+// this exact string - definitions only, the Spells list itself lives in the
+// runtime CombatExtender.json config, same as CX_Spells_L1-L6)
+// ---------------------------------------------------------------------------
+
+new entry "CX_Spells_L7"
+type "PassiveData"
+data "DisplayName" "hbf9859f4ge9e7g405cgbec1g55f84c630b57"
+data "Description" "h43db8882g7260g4850g9388g44fcfc8c6863"
+data "Boosts" ""
+data "Icon" "Spell_Necromancy_FingerOfDeath"
+
+new entry "CX_Spells_L8"
+type "PassiveData"
+data "DisplayName" "ha6c38bb1g2459g4adcgae3agaa2dea86db16"
+data "Description" "hac72ca35g7abdg4ea8g81c9g39b8c2460db3"
+data "Boosts" ""
+data "Icon" "Spell_Abjuration_HolyAura"
+
+new entry "CX_Spells_L9"
+type "PassiveData"
+data "DisplayName" "h289e02fag12e1g4543gba50g033787694124"
+data "Description" "h7f852e2dg8e9eg4b2dg9a57g14ed09433d09"
+data "Boosts" ""
+data "Icon" "Spell_Enchantment_PowerWordKill"
+
+new entry "CX_Spells_L8C"
+type "PassiveData"
+data "DisplayName" "hf2bd41e4g0dd4g4d60g8519g8afc5a1141a6"
+data "Description" "h80f18cffge738g4d70g8858g7b4dbab4cfd0"
+data "Boosts" ""
+data "Icon" "Spell_Enchantment_DominatePerson"
+
+// ---------------------------------------------------------------------------
+// Archetype assignment - same 11 characters Ultimate NPC Stat Overhaul - CX
+// raised to CX_Spells_L6. Each line below is that mod's full Passives value
+// (copied verbatim, trailing empty entries from its own file cleaned up)
+// with the four new tiers appended.
+// ---------------------------------------------------------------------------
+
+new entry "GLO_Elminster"
+type "Character"
+using "GLO_Elminster"
+data "Passives" "CX_Wizard_Evocation_Boost;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Alert;EmpoweredEvocation;FocusedConjuration;MagicResistance;SpellSniper_Critical;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "GLO_Cazador"
+type "Character"
+using "GLO_Cazador"
+data "Passives" "CX_Boss_Boost;CX_Wizard_Necromancy_Boost;CX_Martial_Boost;CX_Spells_L6;CX_Spells_L6C;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;DamageDealtRecently;Alert;ExtraAttack_2;LegendaryAction_LOW_Cazador_BatSwarm;LegendaryAction_LOW_Cazador_BatSwarm_Block;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_HouseOfGrief_Viconia"
+type "Character"
+using "LOW_HouseOfGrief_Viconia"
+data "Passives" "CX_Boss_Boost;CX_Cleric_Trickery_Boost;CX_Spells_L5;CX_Spells_L5C;CX_Spells_L6;CX_Spells_L6C;FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;MagicResistance;LOW_HouseOfGrief_Cultists_Melee;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Viconia_Heart_Empowered;LegendaryAction_LOW_Viconia_DarkSentinel;LegendaryAction_LOW_Viconia_HeartWrench;LOW_Viconia_UmbralResonance;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_RamazithsTower_Lorroakan"
+type "Character"
+using "LOW_RamazithsTower_Lorroakan"
+data "Passives" "CX_Boss_Boost;CX_Wizard_Evocation_Boost;CX_Spells_L5;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;DarknessRules;LOW_RamazithsTower_ElementalSiphon;LOW_RamazithsTower_ElementalRebuke;SculptSpells;PotentCantrip;EmpoweredEvocation;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_Golbraith"
+type "Character"
+using "LOW_Golbraith"
+data "Passives" "CX_Wizard_Evocation_Boost;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Tough;WarCaster_Bonuses;WarCaster_OpportunitySpell;SculptSpells;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_Florrick_Fallback"
+type "Character"
+using "LOW_Florrick_Fallback"
+data "Passives" "CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ModeratelyArmored;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_CazadorsPalace_GuardTower_Human_Caster"
+type "Character"
+using "LOW_CazadorsPalace_GuardTower_Human_Caster"
+data "Passives" "CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "LOW_CazadorPalace_Ritual_Skeleton"
+type "Character"
+using "LOW_CazadorPalace_Ritual_Skeleton"
+data "Passives" "CX_Wizard_Necromancy_Boost;CX_Spells_L6;CX_Spells_L6C;AttackOfOpportunity;DarknessRules;Darkvision;Talkative;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "KillerReplica_Sorcerer"
+type "Character"
+using "KillerReplica_Sorcerer"
+data "Passives" "CX_Spells_L6;CX_Spells_L6C;AttackOfOpportunity;DarknessRules;TAD_PsionicDominance;Evasion;Metamagic_Heightened;Metamagic_Subtle;Goon_Metamagic_Heightened_NPC;Goon_Metamagic_Subtle_NPC;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "KillerReplica_Wizard"
+type "Character"
+using "KillerReplica_Wizard"
+data "Passives" "CX_Spells_L6;CX_Spells_L6C;AttackOfOpportunity;DarknessRules;MagicResistance;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+new entry "Drow_Pirate_boss"
+type "Character"
+using "Drow_Pirate_boss"
+data "Passives" "CX_Spells_L5;CX_Spells_L6;CX_Spells_L6C;FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;DualWielder_BonusAC;DualWielder_PassiveBonuses;ExtraAttack;Drow_balance;Drow_Bounty;CX_Spells_L7;CX_Spells_L8;CX_Spells_L9;CX_Spells_L8C"
+
+// ---------------------------------------------------------------------------
+// Marker status used by CXHighLevelSlots.lua - purely a "already granted the
+// L7/8/9 bonus spell slots" flag on a character, no gameplay effect of its
+// own. Applied permanently (-1 duration) so the Lua doesn't re-add the same
+// ActionResource boost every time the character re-enters combat.
+// ---------------------------------------------------------------------------
+
+new entry "SKYNET_CX_L789_APPLIED"
+type "Status"
+data "StackId" "SKYNET_CX_L789_APPLIED"
+data "Description" "Internal marker: this character has already received its Combat Extender level 7-9 bonus spell slots from Skynet."
+data "Boosts" ""

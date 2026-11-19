@@ -1,0 +1,32 @@
+// Skynet - Party Downed System data (replaces the 'Downed Condition 5E' mod, by GustavX).
+// IDs are IDENTICAL to Downed Condition 5E on purpose (it overrides the vanilla DOWNED status),
+// so DISABLE Downed Condition 5E when using this. The Osiris rules of that mod are replaced by
+// Lua listeners in Server/Skynet.lua (setting: EnablePartyDownedSystem).
+
+new entry "Downed_Tech_Passive"
+type "PassiveData"
+data "DisplayName" "hc9fb7c1age9a3ge468gbbbcg2dba91245b9a;2"
+data "Icon" "Status_Downed"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnCreate"
+data "StatsFunctors" "ApplyStatus(PRONE_DOWNED,100,-1);"
+
+new entry "Downed_Tech_Passive2"
+type "PassiveData"
+using "Downed_Tech_Passive"
+data "StatsFunctors" "ApplyStatus(DOWNED_ANIM,100,-1)"
+
+new entry "Downed_TurnTracker"
+type "PassiveData"
+data "DisplayName" "h063cb48fgf88cg666eg88aag10c0121d7cde;1"
+data "Description" "h5549bc40g5154g5eaegf7eegbca6af759562;1"
+data "Icon" "Status_Downed"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnTurn"
+data "StatsFunctors" "ApplyStatus(SELF,DOWNED5E_ACTIVE_TURN,1)"
+
+new entry "Downed_TurnTracker2"
+type "PassiveData"
+using "Downed_TurnTracker"
+data "StatsFunctorContext" "OnCast;OnAttack"
+data "StatsFunctors" "IF(HasUseCosts('ActionPoint')):ApplyStatus(SELF,D5E_USED_ACTION,100,1);IF(HasUseCosts('BonusActionPoint')):ApplyStatus(SELF,D5E_USED_BACTION,100,1);IF(HasUseCosts('ReactionActionPoint')):ApplyStatus(SELF,D5E_USED_REACTION,100,1);"

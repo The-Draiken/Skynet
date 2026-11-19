@@ -1,0 +1,24 @@
+USING melee
+
+// Skynet Aggressive — maximize damage, close distance, kill priority
+MULTIPLIER_DAMAGE_ENEMY_POS                  3.0
+MULTIPLIER_KILL_ENEMY                        3.0
+MULTIPLIER_DAMAGE_MULTI_TARGET_POS           2.0
+MULTIPLIER_AOE_DAMAGE_POS                    2.0
+MULTIPLIER_ENDPOS_ENEMIES_NEARBY             2.0
+MULTIPLIER_TARGET_MY_ENEMY                   2.0
+MULTIPLIER_TARGET_HOSTILE_COUNT_TWO_OR_MORE  1.5
+MULTIPLIER_FIRST_ACTION_BUFF                 0.3
+MULTIPLIER_BOOST_SELF_POS                    0.5
+MULTIPLIER_CONTROL_ENEMY_POS                 0.5
+MULTIPLIER_SHOVE_ENEMY_POS                   0.0
+MODIFIER_HIT_CHANCE_STUPIDITY                0.0
+MULTIPLIER_HEAL_ALLY_POS                     0.2
+MULTIPLIER_FALLBACK_ENEMIES_NEARBY           -1.0
+MULTIPLIER_ENDPOS_NOT_IN_DANGEROUS_SURFACE   0.3
+INSTAKILL_BASE_SCORE                         2.0
+MULTIPLIER_FALL_DAMAGE_ENEMY                 0.5
+MULTIPLIER_DOT_ENEMY_POS                     1.5
+MULTIPLIER_INCAPACITATE                      1.5
+MULTIPLIER_BLIND                             1.0
+MULTIPLIER_KNOCKDOWN                         1.5

@@ -1,0 +1,23 @@
+USING ranged
+
+// Skynet Defensive — stay back, preserve health, wait for openings
+MULTIPLIER_DAMAGE_ENEMY_POS                  0.8
+MULTIPLIER_KILL_ENEMY                        0.5
+MULTIPLIER_HEAL_ALLY_POS                     1.5
+MULTIPLIER_HEAL_SELF_POS                     2.0
+MULTIPLIER_BOOST_SELF_POS                    2.0
+MULTIPLIER_BOOST_ALLY_POS                    1.0
+MULTIPLIER_CONTROL_ENEMY_POS                 1.5
+MULTIPLIER_ENDPOS_ENEMIES_NEARBY             -2.0
+MULTIPLIER_ENDPOS_ALLIES_NEARBY              1.5
+MULTIPLIER_FALLBACK_ENEMIES_NEARBY           3.0
+MULTIPLIER_TARGET_MY_ENEMY                   0.5
+MULTIPLIER_FIRST_ACTION_BUFF                 1.5
+MULTIPLIER_ENDPOS_NOT_IN_DANGEROUS_SURFACE   2.0
+MODIFIER_HIT_CHANCE_STUPIDITY                0.0
+MULTIPLIER_SHOVE_ENEMY_POS                   0.0
+MULTIPLIER_DOT_ENEMY_POS                     0.8
+MULTIPLIER_INCAPACITATE                      1.0
+MULTIPLIER_BLIND                             1.0
+MULTIPLIER_KNOCKDOWN                         1.0
+MULTIPLIER_REFLECT_DAMAGE                    1.0

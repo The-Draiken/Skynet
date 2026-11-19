@@ -1,0 +1,286 @@
+{
+  "SchemaVersion": 1,
+  "Tabs": [
+    {
+      "TabId": "skynetSettings",
+      "TabName": "Skynet Settings",
+      "Sections": [
+        {
+          "SectionId": "general",
+          "SectionName": "General Settings",
+          "Settings": [
+            {
+              "Id": "EnableReactiveCounters",
+              "Name": "Enable Reactive Counter Statuses",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "When enabled, enemies may receive situational advantage/resistance counters when they detect repeated player tactics. Recommended off for immersion."
+            },
+            {
+              "Id": "EnableDebugLogging",
+              "Name": "Debug Logging",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Show detailed tactical analysis and spell choice decisions in the Script Extender console."
+            },
+            {
+              "Id": "RecordTurnTrace",
+              "Name": "Record each turn to a file that survives a crash",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Keeps the last 30 turns in Script Extender/skynet/turn_trace.txt: who took each turn, everything Skynet decided while planning it (spells in the spell book, spells considered, what it queued, when it handed the turn to the base game AI), how long the turn took and every freeze during it. The file is rewritten at each turn start and end, at each hand-back and right after each freeze, so it shows what was happening when the game crashed. Works with Debug Logging off. Off by default; turn it on when you are chasing a crash or a long freeze in combat."
+            },
+            {
+              "Id": "DiagnoseEnemyMovement",
+              "Name": "Movement diagnostics",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "For troubleshooting only. Logs every enemy's position four times a second during its turn and reports sudden jumps (e.g. enemies appearing on a ledge), and asks the game's pathfinder for a route to each party member whenever Skynet hands a turn to the base game AI. Lines start with [Skynet MoveDiag] in the Script Extender console. Doesn't change how anyone fights; adds console output, so leave it off normally."
+            },
+            {
+              "Id": "EnableEnemyDownedSystem",
+              "Name": "Enable Enemy Downed System",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Humanoid and living enemies receive death saving throws at 0 HP instead of dying instantly. Downed enemies can be healed by allies with healing spells. Excludes undead, constructs, and other non-living creatures."
+            },
+            {
+              "Id": "EnablePartyDownedSystem",
+              "Name": "Enable Party Downed Rules (replaces Downed Condition 5E)",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Downed Condition 5E's rules for your party, run through Script Extender instead of the mod's Osiris scripts (lower overhead): massive damage (a hit larger than current HP + max HP) kills outright, unused actions are restored when you get back up, and you come back Prone. Skynet now ships that mod's status data, so DISABLE Downed Condition 5E when using this. Requires a game restart/reload to take effect."
+            },
+            {
+              "Id": "EnemyAllowWildshape",
+              "Name": "Allow enemy Wildshape / Polymorph (once per fight)",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "When off (default), Skynet never chooses Wildshape, Polymorph or other shape-change spells for enemies, and removes those form spells from non-allied characters when they enter a fight so the base game AI cannot cast them either. When on, an enemy may use one only if it is not already transformed and has not already cast one this fight, so it can no longer waste an action re-casting it every turn."
+            },
+            {
+              "Id": "EnableEnemyBuffs",
+              "Name": "Enable Enemy Buffs (replaces Tactician Enhanced)",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Gives enemies extra max HP, Actions and Bonus Actions when they enter a fight your party is part of. Applied once per enemy per fight (no scanning), and removed when the fight ends. Disable/uninstall Tactician Enhanced when using this. Applies to new fights after a reload."
+            },
+            {
+              "Id": "EnemyBuffScaling",
+              "Name": "Enemy Buffs: scale with party size",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "When on, the values below are multiplied by (party size / 4): a party of 8 doubles them, a party of 2 halves them. Values are rounded (HP to steps of 5%)."
+            },
+            {
+              "Id": "EnemyBuffHPPercent",
+              "Name": "Enemy Buffs: extra max HP (%)",
+              "Type": "slider_int",
+              "Default": 0,
+              "Description": "Extra maximum HP for enemies, in percent (steps of 5). Their current HP keeps the same fraction.",
+              "Options": {
+                "Min": 0,
+                "Max": 100
+              }
+            },
+            {
+              "Id": "EnemyBuffExtraActions",
+              "Name": "Enemy Buffs: extra Actions per turn",
+              "Type": "slider_int",
+              "Default": 0,
+              "Description": "Extra Action points enemies get each turn (0-3).",
+              "Options": {
+                "Min": 0,
+                "Max": 3
+              }
+            },
+            {
+              "Id": "EnemyBuffExtraBonusActions",
+              "Name": "Enemy Buffs: extra Bonus Actions per turn",
+              "Type": "slider_int",
+              "Default": 0,
+              "Description": "Extra Bonus Action points enemies get each turn (0-3).",
+              "Options": {
+                "Min": 0,
+                "Max": 3
+              }
+            },
+            {
+              "Id": "EnablePassiveCapping",
+              "Name": "Passive Cap (Performance)",
+              "Type": "slider_int",
+              "Default": 20,
+              "Description": "Max passives a creature can have before Skynet limits spell evaluation to reduce lag. Set to 0 to disable. Increase if you have fewer mods, decrease if you have heavy mod lists.",
+              "Options": {
+                "Min": 0,
+                "Max": 100
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "adaptiveTargeting",
+          "SectionName": "Adaptive Targeting (Intelligence/Wisdom)",
+          "Settings": [
+            {
+              "Id": "EnableAdaptiveTargeting",
+              "Name": "Enable Adaptive Targeting",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Smart/wise enemies factor in party members' Armor Class, HP, and observed damage output when picking a target, instead of using distance alone. Disable to fully restore base Skynet targeting for every enemy."
+            },
+            {
+              "Id": "AdaptiveTargetingIntThreshold",
+              "Name": "Intelligence Threshold (Full Learning)",
+              "Type": "slider_int",
+              "Default": 14,
+              "Description": "Enemies with an Intelligence score at or above this remember each party member's behavior across the whole playthrough, and factor in both Armor Class and HP when choosing a target.",
+              "Options": {
+                "Min": 1,
+                "Max": 30
+              }
+            },
+            {
+              "Id": "AdaptiveTargetingWisThreshold",
+              "Name": "Wisdom Threshold (This-Fight Awareness)",
+              "Type": "slider_int",
+              "Default": 12,
+              "Description": "Enemies below the Intelligence threshold but with a Wisdom score at or above this notice who's dealing the most damage in the CURRENT fight only (no memory between fights) after enough rounds have passed. They factor in HP only, never Armor Class.",
+              "Options": {
+                "Min": 1,
+                "Max": 30
+              }
+            },
+            {
+              "Id": "AdaptiveTargetingSessionRounds",
+              "Name": "Rounds Before This-Fight Awareness Kicks In",
+              "Type": "slider_int",
+              "Default": 4,
+              "Description": "How many rounds into a fight a Wisdom-tier enemy needs before it starts reacting to who's dealing damage this fight.",
+              "Options": {
+                "Min": 1,
+                "Max": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TabId": "skynetAutoSave",
+      "TabName": "Auto Save",
+      "Sections": [
+        {
+          "SectionId": "autoSaveGeneral",
+          "SectionName": "Auto Save",
+          "Settings": [
+            {
+              "Id": "AutoSaveEnabled",
+              "Name": "Enable Skynet Auto Save",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Turns on all of the auto saves below. Replaces separate auto-save mods (combat end, short rest, trade, Smart Autosaving) — use only one auto-save system at a time or you will get double saves. Requires autosave to be enabled in the game's own options."
+            },
+            {
+              "Id": "AutoSaveWarnUnsafe",
+              "Name": "Warn about unsafe moments to save",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Works even with auto save off. Shows a message when an enemy is downed and making death saving throws outside combat (don't save then: if it stands up and a fight starts while the game is saving, that save can crash on load), and after any save you made at such a moment. Skynet's own auto saves always wait for a safe moment, whether this is on or off."
+            }
+          ]
+        },
+        {
+          "SectionId": "autoSaveTriggers",
+          "SectionName": "When to save",
+          "Settings": [
+            {
+              "Id": "AutoSaveOnCombatEnd",
+              "Name": "Save when a fight ends",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Saves after a fight the party took part in is over. Waits while any enemy is still downed and making death saving throws, until it dies or gets up (if it gets up and the fight restarts, the save waits for that fight to end)."
+            },
+            {
+              "Id": "AutoSaveOnCombatStart",
+              "Name": "Save when a fight begins",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Saves once at the start of a fight, during the first party member's turn after the fight has settled in — never while combat is still starting."
+            },
+            {
+              "Id": "AutoSaveOnInterval",
+              "Name": "Save on a timer",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Saves every set amount of time (below). A save that comes due during combat, dialogue or trading waits until it's over. Any save, including your own, restarts the timer."
+            },
+            {
+              "Id": "AutoSaveInterval",
+              "Name": "Timer length",
+              "Type": "slider_int",
+              "Default": 10,
+              "Description": "How often the timer saves — in minutes, or in seconds if the option below is on (seconds mode never goes below 30 seconds).",
+              "Options": {
+                "Min": 1,
+                "Max": 120
+              }
+            },
+            {
+              "Id": "AutoSaveIntervalInSeconds",
+              "Name": "Timer length is in seconds",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Off: the timer length is in minutes. On: it's in seconds (minimum 30)."
+            },
+            {
+              "Id": "AutoSaveAfterDialogue",
+              "Name": "Save after a dialogue",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Saves when a conversation you were in ends."
+            },
+            {
+              "Id": "AutoSaveAfterTrade",
+              "Name": "Save after trading",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Saves when a trade window a party member opened is closed, so purchases and sales are kept."
+            },
+            {
+              "Id": "AutoSaveOnShortRest",
+              "Name": "Save after a short rest",
+              "Type": "checkbox",
+              "Default": true,
+              "Description": "Saves after the party short rests."
+            },
+            {
+              "Id": "AutoSaveOnLongRest",
+              "Name": "Save after a long rest",
+              "Type": "checkbox",
+              "Default": false,
+              "Description": "Saves after the party finishes a long rest."
+            }
+          ]
+        },
+        {
+          "SectionId": "autoSaveSafety",
+          "SectionName": "Safety",
+          "Settings": [
+            {
+              "Id": "AutoSaveSettleSeconds",
+              "Name": "Settle time (seconds)",
+              "Type": "slider_int",
+              "Default": 3,
+              "Description": "How long things must be calm after combat starts or ends (or anyone joins or leaves a fight) before Skynet will save. Raise it if you still see saves happening during combat changes.",
+              "Options": {
+                "Min": 1,
+                "Max": 15
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<!-- Skynet Class Identification Passives -->
+	<content contentuid="he67b6a65g03fcg431dga01cg0f2685168030" version="1">! Class: Barbarian</content>
+	<content contentuid="h56c46609g72b6g4c39gb166g7f8617bc8a61" version="1">A character who harnesses their fury to punish foes.</content>
+	<content contentuid="h3b2a32d0gf5bdg4994g8a0agbc545ff76f16" version="1">! Class: Bard</content>
+	<content contentuid="h01fa41a8g0349g4d61gac86g3475d0e98ded" version="1">A character with a versatile skillset, who blends artistry, trickery, and spellcraft.</content>
+	<content contentuid="he6acc5c5gd23bg4c8dgb60cg3de3da611c9f" version="1">! Class: Cleric</content>
+	<content contentuid="hdc223953g447cg47f5gada1g3d26f4158e54" version="1">A character of faith, channeling divine magic both to aid and harm.</content>
+	<content contentuid="h215206fcg60f6g4af5g94f2gd3c61fc2399b" version="1">! Class: Druid</content>
+	<content contentuid="h7073005agdd34g494fga7d5g2cf3a7748479" version="1">A character who commands the forces of nature, shaping the world with primal magic.</content>
+	<content contentuid="h6d12a72egfab9g4f45gae31g5d4491dd2b6b" version="1">! Class: Fighter</content>
+	<content contentuid="h5e48ac49gaae0g4a00g8c47g03b6fca54a3c" version="1">A character who has mastered weapons and tactics, excelling in martial combat.</content>
+	<content contentuid="h5f6db4dfgb3b4g4289g937bg039af3d0b1f8" version="1">! Class: Monk</content>
+	<content contentuid="h2456c053g4d3fg4c2ag89fag9ea0f0bb2e1d" version="1">A character who disciplines body and spirit, moving with speed, precision, and inner focus.</content>
+	<content contentuid="hbd9fca0cg8eddg405cga457g81f619e965fe" version="1">! Class: Paladin</content>
+	<content contentuid="h9194b05fgf6fdg4f01ga63aga16a16fed629" version="1">A character who upholds or neglects a sacred oath, a warrior of divinity or demise.</content>
+	<content contentuid="haf18a871g8e0fg46b0gb05eg2ea8ca538b80" version="1">! Class: Ranger</content>
+	<content contentuid="hb866306fgff14g4ea1gbe39g5cab14bea83b" version="1">A character who thrives in the wilds, blending survival instinct with deadly precision.</content>
+	<content contentuid="h8ac0402fgb1fbg439bgb720g741bc0484c6a" version="1">! Class: Rogue</content>
+	<content contentuid="hcc37f62dg9011g4af1ga083gbfdfa4b3cdc7" version="1">A character who excels in stealth, strategy, and quick thinking.</content>
+	<content contentuid="h9987ac52g08b3g40e0gac8eg056b928b8d4b" version="1">! Class: Sorcerer</content>
+	<content contentuid="h306a8551g3347g4c3dg99a7g5c609daac297" version="1">A character with raw arcane power, shaping magic through will alone.</content>
+	<content contentuid="h286630c6gcd5bg4f56g84edg9ede6b7fc8cb" version="1">! Class: Warlock</content>
+	<content contentuid="hde5563d5g900eg49abg801ag0de6eed45e6a" version="1">A character who wields eldritch magic granted by a supernatural patron.</content>
+	<content contentuid="hda3c8533gc225g4f6cgb65fg22e6f4ea9deb" version="1">! Class: Wizard</content>
+	<content contentuid="h26dbae4dg088dg4ad8ga389gf5246cabdf7e" version="1">A character who masters the weave through study and intellect.</content>
+	<content contentuid="h4aea01f0ge171g4e52ga861g7817c068a57b" version="1">! Class: Artificer</content>
+	<content contentuid="h68145debg36b4g4aa3gaf07g1fdb5fa72b7c" version="1">A character who uses magic and ingenuity to unlock extraordinary capabilities in objects.</content>
+	<!-- Modded Subclasses -->
+	<content contentuid="hb9eaafb5g7b73g4f82g89fag0c065b8960a0" version="1">! Subclass: Ancestral Guardian Barbarian</content>
+	<content contentuid="he0dc3febgd2b3g4b0cga015gd77c5517c79b" version="1">A Barbarian who is aided in battle by the spirits of their ancestors.</content>
+	<content contentuid="hf613d9a9gd501g4d03g8adfg037905f43d21" version="1">! Subclass: Zealot Barbarian</content>
+	<content contentuid="h6d3857bcg2f3eg44c8g8c6bg7f24b3e3e58b" version="1">A Barbarian whose deity infuses them with divine power and inspires them to launch themselves into battle with a ferocious fury.</content>
+	<content contentuid="hacb7be72g47d3g44f5gac3cgffd83f26d8f5" version="1">! Subclass: Order Domain Cleric</content>
+	<content contentuid="hbdacdfa2gdcb4g4b76gb671g90e86b7d0863" version="1">A Cleric who meditates on logic and justice as they serve their god in devotion to law.</content>
+	<content contentuid="hcd3947a0gfaa4g48bdg9e04g0711b62e744f" version="1">! Subclass: Twilight Domain Cleric</content>
+	<content contentuid="haa5c4ca0gdda5g4178ga7e6g3193c0412c35" version="1">A Cleric whose service to the gods of twilight compells them to bring comfort to those that seek rest.</content>
+	<content contentuid="hf763e70cgfd68g424eg98b0gef82ccee5fb1" version="1">! Subclass: Brute Fighter</content>
+	<content contentuid="ha260d3f4g1fc2g4218g8d46gb921dfa9217e" version="1">A simple warrior who relies on mighty attacks and their own durability to overcome their enemies.</content>
+	<content contentuid="hdb2f06e0gfbd4g498fgb25ag7bf909fe00ba" version="1">! Subclass: Banneret Fighter</content>
+	<content contentuid="h4914c402gade6g46c3ga44bg8add4668962a" version="1">A Fighter whose actions can awaken reserves of courage and conviction in their allies.</content>
+	<content contentuid="hdb61a7f2g09bbg4ccfg9378g49bef34ff329" version="1">! Subclass: Psi Warrior Fighter</content>
+	<content contentuid="h3e698fecg6d63g4faag918age83a1955490f" version="1">A Fighter who augments their physical might with psi-infused weapon strikes, telekinetic lashes, and barriers of mental force.</content>
+	<content contentuid="hecca81a4g51eeg4ea8g80a5gf78124dcf6a8" version="1">! Subclass: Oath of Conquest Paladin</content>
+	<content contentuid="hbd89843dg274fg4e8bga664gb7890ed0effa" version="1">A Paladin who seeks glory in battle and the subjugation of their enemies.</content>
+	<content contentuid="hbb14d35egffa1g41c5gae0agc74bcff8be0b" version="1">! Subclass: Monster Slayer Ranger</content>
+	<content contentuid="h5b04945bg2297g44d5g81efg18ff6f91f167" version="1">A Ranger trained in supernatural techniques, dedicated to hunting down creatures of the night and other mystical foes.</content>
+	<content contentuid="h36931741g699ag4985gbcfege6f3ee0f22e3" version="1">! Subclass: Scion of the Three Rogue</content>
+	<content contentuid="hd531f517ge555g4f6bga031g88a49cfe1e42" version="1">A Rogue who draws power from the Dead Three: Bane, Bhaal, and Myrkul.</content>
+	<content contentuid="h8d108dacg32fdg4512g8e7dg820515d972d6" version="1">! Subclass: Artificer Alchemist</content>
+	<content contentuid="h7c8974ebge7c4g4f9dg8552g696f7284ff95" version="1">An Artificer who uses their alchemical creations to give life and ot leech it away.</content>
+	<content contentuid="hcebea346g124cg49d7gade2g82fb93bc43a8" version="1">! Subclass: Artificer Armourer</content>
+	<content contentuid="hd9837963g0f62g480eg9c5agb05361ecf40b" version="1">An Artificer who can modify and enhance armour to unleash potent attacks and generate a formidable defence.</content>
+	<content contentuid="h022bb857g6376g48b1ga9b5g235e00a4bf0d" version="1">! Subclass: Artificer Artillerist</content>
+	<content contentuid="h3a231135g8d9dg40abga763g5bc8d29c39b1" version="1">An Artificer who specializes in using magic to hurl energy, projectiles, and explosions on a battlefield.</content>
+	<content contentuid="h9d765ccag59f6g409dg9ad1g4f6c779c9805" version="1">! Subclass: Artificer Battle Smith</content>
+	<content contentuid="hcf3d8330ga37fg485bg8485gb523ddcc4d87" version="1">An Artificer who is an expert at defending others and repairing both materiel and personnel.</content>
+</contentList>

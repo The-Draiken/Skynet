@@ -1,0 +1,19 @@
+new entry "SKYNET_TRACKER"
+type "Status"
+data "StackId" "SKYNET"
+data "Description" "Internal tracker for player tactics and loadouts."
+
+new entry "SKYNET_ANTI_CONTROL"
+type "Status"
+data "StackId" "SKYNET_COUNTER"
+data "Boosts" "FreedomOfMovement();Advantage(SavingThrow);IF(HasStatus('SG_Restrained')):Disadvantage(Attack)"
+
+new entry "SKYNET_ANTI_MOBILITY"
+type "Status"
+data "StackId" "SKYNET_COUNTER"
+data "Boosts" "DifficultTerrainImmunity();IF(HasStatus('SG_Slowed')):RemoveStatus('SG_Slowed')"
+
+new entry "SKYNET_HIGH_GROUND_COUNTER"
+type "Status"
+data "StackId" "SKYNET_COUNTER"
+data "Boosts" "RangedAdvantage();IgnoreDifficultTerrain()"

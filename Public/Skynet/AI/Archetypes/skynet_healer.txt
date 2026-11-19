@@ -1,0 +1,23 @@
+USING ranged
+
+// Skynet Healer — prioritize healing allies, stay safe, support
+MULTIPLIER_HEAL_ALLY_POS                     4.0
+MULTIPLIER_HEAL_SELF_POS                     3.0
+MULTIPLIER_RESURRECT                         4.0
+MULTIPLIER_BOOST_ALLY_POS                    2.0
+MULTIPLIER_BOOST_SELF_POS                    1.0
+MULTIPLIER_DAMAGE_ENEMY_POS                  0.3
+MULTIPLIER_KILL_ENEMY                        0.2
+MULTIPLIER_CONTROL_ENEMY_POS                 0.5
+MULTIPLIER_ENDPOS_ALLIES_NEARBY              2.0
+MULTIPLIER_ENDPOS_ENEMIES_NEARBY             -1.0
+MULTIPLIER_FALLBACK_ENEMIES_NEARBY           2.0
+MULTIPLIER_TARGET_MY_ENEMY                   0.3
+MULTIPLIER_FIRST_ACTION_BUFF                 1.0
+MULTIPLIER_ENDPOS_NOT_IN_DANGEROUS_SURFACE   1.0
+MODIFIER_HIT_CHANCE_STUPIDITY                0.0
+MULTIPLIER_SHOVE_ENEMY_POS                   0.0
+MULTIPLIER_DOT_ENEMY_POS                     0.2
+MULTIPLIER_INCAPACITATE                      0.3
+MULTIPLIER_BLIND                             0.3
+MULTIPLIER_KNOCKDOWN                         0.3
