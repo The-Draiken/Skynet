@@ -210,4 +210,4 @@ A full auto-save system written for Skynet, with crash-safe rules. Use it instea
 
 ## Questions 
 
-You can ask me questions at https://rpghq.org/forums/viewtopic.php?t=6788-skynet directly. (I advise you to not go through the forum itself as people there are unhinged)
+You can ask me questions at [https://rpghq.org/forums/viewtopic.php?t=6788-skynet](https://rpghq.org/forums/viewtopic.php?p=433622-skynet-7-0-baldur-s-gate-3) directly. (I advise you to not go through the forum itself as people there are unhinged)
